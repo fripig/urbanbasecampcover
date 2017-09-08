@@ -207,6 +207,8 @@ function loadImage(files) {
     var canvas = document.getElementById("canvas")
     canvas.width = img.width;
     canvas.height = img.height;
+    var height_rate = 842/(658+842) * 100
+    var width_rate = 658/(658+842) * 100
     var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
     var base64 = canvas.toDataURL("image/png");
@@ -217,12 +219,12 @@ function loadImage(files) {
     var thumb = document.getElementById("thumb");
     var thumb_w,thumb_h;
     if(img.width > img.height) {
-      thumb_h = 100;
-      thumb_w = 100*(img.width/img.height);
+      thumb_h = height_rate;
+      thumb_w = width_rate*(img.width/img.height);
     }
     else {
-      thumb_w = 100;
-      thumb_h = 100*(img.height/img.width);
+      thumb_w = height_rate;
+      thumb_h = width_rate*(img.height/img.width);
     }
     thumb.width = thumb_w;
     thumb.height = thumb_h;
