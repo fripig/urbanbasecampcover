@@ -122,21 +122,23 @@ $(window).konami({
 
 function createImage(template,source,x,y,w,h){
   var cover = new Image();
+  var cover_width = 658;
+  var cover_height = 842;
   cover.src = 'images/object/'+template+'.png';
 
   var userimage = new Image();
   userimage.src = source;
 
   var resize_canvas = document.getElementById("result");
-  resize_canvas.width = 500;
-  resize_canvas.height = 500;
+  resize_canvas.width = cover_width;
+  resize_canvas.height = cover_height;
 
   var ctx = resize_canvas.getContext("2d");
-  ctx.rect(0,0,500,500);
+  ctx.rect(0,0,cover_width,cover_height);
   ctx.fillStyle="#CCCCCC";
   ctx.fill();
   ctx.drawImage(userimage,x,y,w,h);
-  ctx.drawImage(cover,0,0,500,500);
+  ctx.drawImage(cover,0,0,cover_width,cover_height);
 
   var base64 = resize_canvas.toDataURL("image/png");
 
