@@ -89,7 +89,7 @@ $(document).ready(function()
     basesize = $userimage.width(),
     size = getBackgroundSize($userimage.css('background-size')),
     position = getBackgroundPosition($userimage.css('background-position')),
-    scale = basesize/500;
+    scale = basesize/658;
 
     var
     template = $('input[name=template]:checked').val(),
