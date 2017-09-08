@@ -483,11 +483,12 @@ label.checkbox {
 /* line 35, ../sass/partials/_preview.scss */
 .preview #userimage .inner,
 .preview #coverimage .inner {
-  width: 100%;
+  width: 78%;
   padding-top: 100%;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 50% 50%;
+  margin-left: 11%;
 }
 /* line 46, ../sass/partials/_preview.scss */
 .preview #coverimage {
