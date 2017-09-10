@@ -135,7 +135,7 @@ function createImage(template,source,x,y,w,h){
 
   var ctx = resize_canvas.getContext("2d");
   ctx.rect(0,0,cover_width,cover_height);
-  ctx.fillStyle="#CCCCCC";
+  ctx.fillStyle="#fff";
   ctx.fill();
   ctx.drawImage(userimage,x,y,w,h);
   ctx.drawImage(cover,0,0,cover_width,cover_height);
